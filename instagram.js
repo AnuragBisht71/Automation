@@ -16,7 +16,7 @@ const puppeteer = require("puppeteer");
     await tab.type('input[name="password"]' , pw);
     await tab.click('button[class="_acan _acap _acas _aj1-"]');
     await tab.waitForSelector(".x1i10hfl.xjqpnuy");
-    await tab.click(".x1i10hfl.xjqpnuy");
+    await tab.click(".x1i10hfl.xjqpnuy"); // FOR POP UP NOTIFICATION
     await tab.waitForSelector("._a9-z");
-    await tab.click("._a9-z");
+    await tab.click("._a9-z"); // FOR POP UP NOTIFICATION
 })();
