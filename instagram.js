@@ -25,5 +25,14 @@ const puppeteer = require("puppeteer");
     await searchOption.click();
     await tab.type('div input[aria-label="Search input"]' , acc);
     await tab.waitForTimeout(2000);
-    await tab.click('div[role="none"] a[href="/theo.7xtz/"]');
+    let accLink = await tab.$('div[role="none"] a[href="/theo.7xtz/"]');
+    let newTab = browser.newPage();
+    await likeAllPosts(newTab , accLink);
 })();
+
+async function likeAllPosts(newTab, accLink) {
+    await newTab.goto(accLink);
+}
+
+
+
