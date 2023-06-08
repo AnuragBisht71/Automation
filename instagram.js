@@ -1,5 +1,6 @@
 const id = "_ok.anurag";
 const pw = "bishtrocks"; 
+const acc = "theo.7xtz";
 const puppeteer = require("puppeteer");
 
 (async function() {
@@ -19,4 +20,10 @@ const puppeteer = require("puppeteer");
     await tab.click(".x1i10hfl.xjqpnuy"); // FOR POP UP NOTIFICATION
     await tab.waitForSelector("._a9-z");
     await tab.click("._a9-z"); // FOR POP UP NOTIFICATION
+    let allOption = await tab.$$('.x1n2onr6 a[href="#"]');
+    let searchOption = allOption[0];
+    await searchOption.click();
+    await tab.type('div input[aria-label="Search input"]' , acc);
+    await tab.waitForTimeout(2000);
+    await tab.click('div[role="none"] a[href="/theo.7xtz/"]');
 })();
